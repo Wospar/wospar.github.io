@@ -1,10 +1,11 @@
 ---
 layout: post
-title: First Post
+title: Article Dsicussion
 ---
+[link to article] (https://www.whitehouse.gov/briefing-room/statements-releases/2025/01/07/white-house-launches-u-s-cyber-trust-mark-providing-american-consumers-an-easy-label-to-see-if-connected-devices-are-cybersecure/)
 
-First post to this page, 
-most of the posts are going to be dedicated to documenting the processes we use in the CSEH immersive.
-Whoever is reading this in the future, good luck!  
+I think that this is a good idea at the core, but I think that it will create a bunch of problems in the future.  
 
-I am most interested in the offensive security part of cybersecurity, since it engages with machines over the internet in ways that I've never seen before. I hope to learn more about what working in cybersecurity actually entails, as well as some details about people I know and what they do.
+The biggest one that I can see right now is that creating a universal set of standards means that companies are going to try and meet them. The problem arises when someone attacks you in a way not set by those standards. This could lead to a lot of oversights in certain areas across the board for all electronics.  
+  
+Another problem I can see appearing is that once one of these products receives the seal of approval, a hacker might be able to silently compromise their security, but since people trust the stamp, the products will continue to be sold. So long as the hacker doesn't make their presence known, people will continue to assume that those products are safe and secure. 
