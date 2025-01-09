@@ -6,6 +6,6 @@ title: Article Dsicussion
 
 I think that this is a good idea at the core, but I think that it will create a bunch of problems in the future.  
 
-The biggest one that I can see right now is that creating a universal set of standards means that companies are going to try and meet them. The problem arises when someone attacks you in a way not set by those standards. This could lead to a lot of oversights in certain areas across the board for all electronics.  
+The biggest issue I see right now is that creating a universal set of standards means that companies are going to try and meet them. The problem arises when someone attacks you in a way not set by those standards. This could lead to a lot of oversights in certain areas across the board for all electronics.  
   
 Another problem I can see appearing is that once one of these products receives the seal of approval, a hacker might be able to silently compromise their security, but since people trust the stamp, the products will continue to be sold. So long as the hacker doesn't make their presence known, people will continue to assume that those products are safe and secure. 
