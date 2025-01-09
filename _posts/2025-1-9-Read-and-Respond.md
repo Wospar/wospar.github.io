@@ -4,7 +4,7 @@ title: Article Dsicussion
 ---
 [*White House Launches *“***U.S. Cyber Trust Mark***”*, Providing American Consumers an Easy Label to See if Connected Devices are Cybersecure*](https://www.whitehouse.gov/briefing-room/statements-releases/2025/01/07/white-house-launches-u-s-cyber-trust-mark-providing-american-consumers-an-easy-label-to-see-if-connected-devices-are-cybersecure/)
 
-I think that this is a good idea at the core, but I think that it will create a bunch of problems in the future.  
+I think that this is a good idea at the core, but I think that it will create a number of problems in the future.  
 
 The biggest issue I see right now is that creating a universal set of standards means that companies are going to try and meet them. The problem arises when someone attacks you in a way not set by those standards. This could lead to a lot of oversights in certain areas across the board for all electronics.  
   
