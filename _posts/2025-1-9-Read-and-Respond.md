@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Article Dsicussion
+title: Article Discussion
 ---
 [*White House Launches *“***U.S. Cyber Trust Mark***”*, Providing American Consumers an Easy Label to See if Connected Devices are Cybersecure*](https://www.whitehouse.gov/briefing-room/statements-releases/2025/01/07/white-house-launches-u-s-cyber-trust-mark-providing-american-consumers-an-easy-label-to-see-if-connected-devices-are-cybersecure/)
 
