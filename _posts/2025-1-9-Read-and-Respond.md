@@ -2,7 +2,7 @@
 layout: post
 title: Article Dsicussion
 ---
-[link to article] (https://www.whitehouse.gov/briefing-room/statements-releases/2025/01/07/white-house-launches-u-s-cyber-trust-mark-providing-american-consumers-an-easy-label-to-see-if-connected-devices-are-cybersecure/)
+[link to article](https://www.whitehouse.gov/briefing-room/statements-releases/2025/01/07/white-house-launches-u-s-cyber-trust-mark-providing-american-consumers-an-easy-label-to-see-if-connected-devices-are-cybersecure/)
 
 I think that this is a good idea at the core, but I think that it will create a bunch of problems in the future.  
 
