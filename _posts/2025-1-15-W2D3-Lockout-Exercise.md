@@ -3,7 +3,7 @@ layout: post
 title: Command documentation
 ---
 
-Scenario: we have been locked out of our machine, and need to find the password in order to reagin access.
+Scenario: we have been locked out of our machine, and need to find the password in order to regain access.
 
 Start
 Our first task was to figure out the IP address of the machine we were trying to hack into. 
