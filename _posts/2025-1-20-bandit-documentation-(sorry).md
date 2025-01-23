@@ -154,12 +154,31 @@ x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO - 18
 Ssh allows commands to be run immediately during the connection. You can do this by just adding the command to the end of your ssh call
 ssh bandit18@bandit.labs.overthewire.org -p 2220 ls 
 ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme
-
 This gives us 
+
 
 cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8 - 19
 For this level, our directory contains bandit20-do, which is a binary executable. This helps us because it allows us to access certain files as the user bandit20. This means that we can access the password using their credentials. 
 ./bandit20-do less /etc/bandit_pass/bandit20
 This shows us the contents of bandit_pass as though we are bandit20, and give us the password 
 
+
 0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO - 20
+for this next level, we use the Netcat command
+this creates a server on port x that can do whatever we want, in this case broadcast the previous password
+to do this, we would do this command:
+echo "password" | nc -l -p port#
+then we want to connect suconnect to the server using ./suconnect
+this gives us the next password, which is 
+
+
+EeoULMCra2q0dSkYj561DX7s1CpBuOBt - 21
+for this level, we need to look into the cronjob folder to see what commands are being run. we see that user 22 is running the file /usr/bin/cronjob_bandit22.sh. this file contains the location our next password, which is /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv. in this file is our password - 
+
+
+tRae0UfB9v0UzbCdn9cY0gQnds9GF58Q - 22
+for this one, we start the same way as last time, but this time instead of a file with the location, there is a script. normally, it is able to tell who you are, but we can fool it by echoing the part that we want. in this case, we want to say "echo I am user bandit23 | md5sum | cut -d ' ' -f 1"
+this makes the script think that we are bandit23, meaning it will give us the location where the password is stored.
+the string of characters it gives us is the name of a /tmp file. if we cat it, it will give us the password, which in this case is
+
+0Zf11ioIjMVN551jX3CmStKLYqjk54Ga - 23
