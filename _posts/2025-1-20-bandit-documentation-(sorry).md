@@ -181,4 +181,75 @@ for this one, we start the same way as last time, but this time instead of a fil
 this makes the script think that we are bandit23, meaning it will give us the location where the password is stored.
 the string of characters it gives us is the name of a /tmp file. if we cat it, it will give us the password, which in this case is
 
+
 0Zf11ioIjMVN551jX3CmStKLYqjk54Ga - 23
+in the same manner as the previous 2 levels, we look through the cronjob tab to find where the file being run is stored. we find the cronjob_bandit24.sh file, which executes and deletes all files in the /var/spool/$myname/foo directory. for this, we want to run a script that writes out the user password stored in the bandit_pass directory into a user-generated file. we can start by making a temp directory for all our stuff. we want to make a file to store the password, and a script to get the password. the script is very simple, just cat the password into the password file, like this:
+#!/bin/bash  
+cat /etc/bandit_pass/bandit24 > /tmp/tmp.[#]/password  
+after a short delay, that gives us the next password
+
+
+gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8 - 24
+for this level, we start off by making another temp folder. from here, we want to write a script that can concatenate the previous password + a 4 digit pin. that script looks like this: 
+#!/bin/bash
+
+for x in {0000..9999}
+do  
+        echo gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8 $i >> combinations.txt  
+done  
+
+then, we just need to output all of those into the daemon but using netcat. 
+cat combinations.txt | nc localhost 30002 > answers.txt
+
+then, we can use the uniq command on asnwers .txt to find what lines contain the password, this gives us an output of 
+I am the pincode checker for user bandit25. Please enter the password for user bandit24 and the secret pincode on a single line, separated by a space.
+Wrong! Please enter the correct current password and pincode. Try again.
+Correct!
+The password of user bandit25 is 
+
+
+iCi86ttT4KSNe1armKiwbQNmB3YJP3q4 - 25
+this one is pretty rough. we need to find out what shell the user bandit26 was using and how it works, as well as break out of it in order to get the password. to start, we need to figure out what shell they were using. we can find this by looking through /etc/passwd to find what shell bandit26 has been using. this presents us with a directory: /usr/bin/showtext. displaying the file gives us a bash script: #!/bin/sh
+
+export TERM=linux
+
+exec more ~/text.txt
+exit 0
+this leads us to the file text.txt, which will be useful later
+the solution to log into bandit26 is a bit odd, and i was really confused until I looked it up. basically, if you resize your terminal window to the smallest size, you can break the code running the text diplay, and then open vim. vim allows you to run bash commands without needing to enter the bash shell. from here, you want to set the default shell to bash (:set shell=/bin/bash) then change the shell to default (:shell). from here, you can navigate as normal to access the password file.
+
+
+s0773xxkk0MXfdqOfPRVr9L3jJBUOgCZ - 27
+this level is time sensitive, so make sure to do this quickly, or restart from 26. it's the same command as level 19, basically just a memory test.
+
+
+upsNCc7vzaRDx6oZC6GiR6ERwe1MowGB - 28
+this level requires you to clone a git repository. to start, create a temp directory to stor the files, then run 
+git clone ssh://bandit27-git@localhost:2220/home/bandit27-git/repo
+this creates the git repository in your local directory, as well as load it from port 2220. inside the git repository is a README file containing our next password
+
+
+Yz9IpL0sBcCeuG7m9uQFt8ZNpS4HZRcN - 29
+this level starts off the same way as the previous, but this time we need to know how to look through the commit history. to do this, we need to use the git log command, which shows us all previous commits, as well as what their numbers are. once we know this, we can change branches with the git checkout command, then use the git show command in order to see what has been changed. when we do git show 3621de89d8eac9d3b64302bfb2dc67e9a566decd, we can see that the password is 
+
+
+4pT1t5DENaYuqnqvadYs1oE4QLCdjmJ7 - 29
+this level starts in the same way as the previous two, but this time we need to use the branches feature of a git repository in order to find the password. by using the git branch -a command, we can see all of the branches in this particualr repository. the one that we are interested in is the dev branch, since it seems most likely to have a password in it. when we look, we see that there are more commits here than there were in the master branch. when we look at the most recent one, we see that it contains the password for our next level. 
+
+
+qp30ex3VLz5MDG1n91YowTv4Q8l7CDZL - 30
+this time, the password is hidden in a git tag. in order to show tafs, use the git tag command. then, we use the git show command to show the content of the tags. in this case, the tag is labeled "secret". using the git show command give us the password to the next level
+
+
+fb5S2xb7bRyFmAvQYQGEqsbhVyJqhnDy - 31
+the next challenge involves pushing a file to a remote repo. we want to start the same way as before, with a tmp directory. then, we want to create the file that it wants us to
+echo 'May I come in?' > key.txt
+we want to push this change live, but we are being filtered by gitignore. to get around this, use the add -f command. then, we can commit those changes. finally, we use git push origin master to give us our final answer
+
+
+3O9RfhqyAlVBEZpVb6LYStshZoqoSx5K - 32
+this time, we are stuck in an all uppercase shell. in order to get back to the normal shell, we need to use the variable $0. once we do this, we are able to use commands normally again. from here, if we use whoami, we can see that we are logged into bandit 33, and can directly read the password. 
+
+
+tQdtbs5D5i2vJwkO8mEyYEyTL8izoeJ0 - 33
+thats all there is to it
